@@ -1,31 +1,31 @@
-# 🔧 OtoPart Platform
+# OtoPart Platform
 
 Otomotiv parça e-ticaret ve akıllı teslimat platformu.  
 Spring Boot 3.2 · PostgreSQL · Redis · JWT · Groq AI
 
 ---
 
-## 🗺️ Modüller & Geliştirme Yol Haritası
+## Modüller & Geliştirme Yol Haritası
 
-| # | Modül | Açıklama | Durum |
-|---|-------|----------|-------|
-| 1 | **Auth** | Kayıt / Giriş / JWT / Usta (B2B) kaydı / DBS | ⬜ Başlanacak |
-| 2 | **Ürün & Kategori** | CRUD, arama, lastik/şase filtresi, etiketler | ⬜ |
-| 3 | **Tedarikçi** | 50 tedarikçi entegrasyonu, otomatik sipariş iletimi | ⬜ |
-| 4 | **Teslimat Slotları** | 09-12-15-17 slot sistemi, Ankara/şehir dışı mantığı | ⬜ |
-| 5 | **Garaj** | Şase ekleme, araç uyumluluk filtresi, garaj etiketi | ⬜ |
-| 6 | **Sipariş** | Sepet → Sipariş → Tedarikçi iletimi | ⬜ |
-| 7 | **Sadakat Puanı** | 1 TL = 1 puan, ücretsiz kargo, ilk 3 sipariş | ⬜ |
-| 8 | **Kupon & İndirim** | İlk sipariş kuponu, toplu alım, kampanya etiketleri | ⬜ |
-| 9 | **B2B / Usta** | %10 iskonto, DBS tanımlama, toplu sipariş | ⬜ |
-| 10 | **Kurye & Kargo** | Motokurye atama, konum takibi, kargo entegrasyonu | ⬜ |
-| 11 | **AI Asistan** | Groq – şase sorgula, sepete ekle, canlı destek | ⬜ |
-| 12 | **Ödeme** | Kredi kartı taksit, DBS, banka kredisi yönlendirme | ⬜ |
-| 13 | **Admin Panel** | Dashboard, raporlar, tedarikçi yönetimi | ⬜ |
+| # | Modül | Açıklama |  
+|---|-------|----------|
+| 1 | **Auth** | Kayıt / Giriş / JWT / Usta (B2B) kaydı / DBS 
+| 2 | **Ürün & Kategori** | CRUD, arama, lastik/şase filtresi, etiketler 
+| 3 | **Tedarikçi** | 50 tedarikçi entegrasyonu, otomatik sipariş iletimi 
+| 4 | **Teslimat Slotları** | 09-12-15-17 slot sistemi, Ankara/şehir dışı mantığı
+| 5 | **Garaj** | Şase ekleme, araç uyumluluk filtresi, garaj etiketi
+| 6 | **Sipariş** | Sepet → Sipariş → Tedarikçi iletimi 
+| 7 | **Sadakat Puanı** | 1 TL = 1 puan, ücretsiz kargo, ilk 3 sipariş 
+| 8 | **Kupon & İndirim** | İlk sipariş kuponu, toplu alım, kampanya etiketleri 
+| 9 | **B2B / Usta** | %10 iskonto, DBS tanımlama, toplu sipariş 
+| 10 | **Kurye & Kargo** | Motokurye atama, konum takibi, kargo entegrasyonu 
+| 11 | **AI Asistan** | Groq – şase sorgula, sepete ekle, canlı destek 
+| 12 | **Ödeme** | Kredi kartı taksit, DBS, banka kredisi yönlendirme
+| 13 | **Admin Panel** | Dashboard, raporlar, tedarikçi yönetimi 
 
 ---
 
-## 🏗️ Proje Yapısı
+## Proje Yapısı
 
 ```
 src/main/java/com/otopart/
@@ -49,7 +49,7 @@ src/main/java/com/otopart/
 
 ---
 
-## 🚀 Çalıştırma
+## Çalıştırma
 
 ### 1. Veritabanını başlat
 ```bash
@@ -68,7 +68,7 @@ http://localhost:8080/api/swagger-ui.html
 
 ---
 
-## 🔑 Ortam Değişkenleri
+## Ortam Değişkenleri
 
 ```env
 DB_USERNAME=otopart
@@ -80,7 +80,7 @@ GROQ_API_KEY=your_groq_api_key
 
 ---
 
-## 📦 Teknoloji Yığını
+## Teknoloji Yığını
 
 - Java 17, Spring Boot 3.2
 - PostgreSQL 15, Flyway migration
