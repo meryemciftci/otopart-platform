@@ -1,0 +1,64 @@
+spring:
+  application:
+    name: otopart-platform
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/otopart_db
+    username: ${DB_USERNAME:otopart}
+    password: ${DB_PASSWORD:otopart123}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+# ── JWT ───────────────────────────────────────────────────────────────────
+jwt:
+  secret: ${JWT_SECRET:change-this-secret-in-production-min32chars!}
+  expiration: 86400000       # 24 saat
+  refresh-expiration: 604800000  # 7 gün
+
+# ── Teslimat Slotları ─────────────────────────────────────────────────────
+delivery:
+  slots: ["09:00","12:00","15:00","17:00"]
+  ankara-cutoff-hour: 16      # 16:00'a kadar aynı gün
+  next-day-cities: [ISTANBUL, IZMIR, BURSA]
+  cargo-days: 2
+
+# ── Sadakat Puanı ─────────────────────────────────────────────────────────
+loyalty:
+  points-per-order-tl: 1        # 1 TL = 1 puan
+  free-shipping-threshold: 500  # 500 puan = ücretsiz kargo
+  first-orders-free-shipping: 3 # İlk 3 sipariş ücretsiz
+
+# ── B2B / Usta ────────────────────────────────────────────────────────────
+b2b:
+  discount-rate: 0.10   # %10 iskonto
+
+# ── AI (Groq) ─────────────────────────────────────────────────────────────
+ai:
+  groq:
+    api-url: https://api.groq.com/openai/v1
+    api-key: ${GROQ_API_KEY:}
+    model: llama3-70b-8192
