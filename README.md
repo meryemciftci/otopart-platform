@@ -1,7 +1,7 @@
 # OtoPart Platform
 
 Otomotiv parça e-ticaret ve akıllı teslimat platformu.  
-Spring Boot 3.2 · PostgreSQL · Redis · JWT · Groq AI
+
 
 ---
 
