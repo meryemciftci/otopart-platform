@@ -29,7 +29,11 @@ public class GlobalExceptionHandler {
             errors.put(field, message);
         });
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(ApiResponse.error("Validation hatası", errors));
+                .body(ApiResponse.<Void>builder()
+                        .success(false)
+                        .message("Validation hatası")
+                        .errors(errors)
+                        .build());
     }
 
     @ExceptionHandler(Exception.class)
