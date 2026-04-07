@@ -41,9 +41,9 @@ jwt:
 
 # ── Teslimat Slotları ─────────────────────────────────────────────────────
 delivery:
-  slots: ["09:00","12:00","15:00","17:00"]
-  ankara-cutoff-hour: 16      # 16:00'a kadar aynı gün
-  next-day-cities: [ISTANBUL, IZMIR, BURSA]
+  slots: "09:00,12:00,15:00,17:00"
+  ankara-cutoff-hour: 16
+  next-day-cities: "ISTANBUL,IZMIR,BURSA"
   cargo-days: 2
 
 # ── Sadakat Puanı ─────────────────────────────────────────────────────────

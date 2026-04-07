@@ -32,6 +32,10 @@ public class Product extends BaseEntity {
     @JoinColumn(name = "category_id")
     private Category category;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "supplier_id")
+    private com.otopart.domain.supplier.entity.Supplier supplier;
+
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal price;
 
