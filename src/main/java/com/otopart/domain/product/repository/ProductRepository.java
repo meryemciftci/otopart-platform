@@ -35,4 +35,11 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     @Query("SELECT p FROM Product p WHERE p.discountedPrice IS NOT NULL AND p.active = true")
     Page<Product> findDiscountedProducts(Pageable pageable);
+
+    @Query("SELECT p FROM Product p WHERE p.active = true")
+    Page<Product> findCompatibleProducts(
+            @Param("brand") String brand,
+            @Param("model") String model,
+            @Param("year") Integer year,
+            Pageable pageable);
 }
