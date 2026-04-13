@@ -1,3 +1,4 @@
+# OtoPart Platform - Spring Boot 3.2
 spring:
   application:
     name: otopart-platform
